@@ -15,3 +15,27 @@ test('summing two positive numbers', () => {
 //  inputting null
 //  inputting NaN
 //  inputting Infinity
+
+test('sum two negative numbers', () => {
+    expect(add(-1, -2)).toBe(-3)
+})
+
+test('sum a positive and a negative number', () => {
+    expect(add(5, -3)).toBe(2)
+})
+
+test("summing 0's", ()=> {
+    expect(add(0, 0)).toBe(0)
+})
+
+test('inputting undefined', ()=> {
+    expect(add(!Number, !Number)).toBe(NaN)
+})
+
+test('inputing null', ()=> {
+    expect(add(null, null)).toBe(null)
+})
+
+test('input infinity', ()=> {
+    expect(add(Infinity, Infinity)).toBe(Infinity)
+})
